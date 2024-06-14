@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+  border-right:1px solid #bbb;
+}
+
+li:last-child {
+  border-right: none;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+} 
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color:#C0392B;
+}
+</style>
+</head>
+<body>
+
+<!-- Navigation Bar-->
+<ul>
+  <li><a class="active" href="Dashboard.html">Home</a></li>
+<li><a href="Services.html">Services</a></li>
+<li><a href="Profile.html">Products</a></li>
+<li><a href="Contact.html">Contact</a></li>
+</ul>
+
+<!-- Slide Show -->
+<section>
+  <img class="mySlides" src="NNA.png" style="width:100%">
+  <img class="mySlides" src="ReeferCargo.jpg" style="width:100%">
+  <img class="mySlides" src="Crusher.jpg" style="width:100%">
+  <img class="mySlides" src="StopeDrills.jpg" style="width:100%">
+  <img class="mySlides" src="Warehouse.jpeg" style="width:100%">
+  <img class="mySlides" src="RailFreight.png" style="width:100%">
+</section>
+
+
+<!-- About Article -->
+<section class="container center content" style="max-width:600px">
+  <h2 class="heading">About Us</h2>
+  <p class="paragraph"><i>NNA Transport and Logistics(Pty) Ltd wa established in December 2019. It is a dynamic and innovative transport and logistics comapan and 100% black woman owned. The founder member Audrey Nkonyane has an extensive corporate experience and a background in project management and business adminstration. She is supported vy a dynamic team, which comprises of the marketing specialist with approximately 20 years work experience, and a process engineer with approximately 5 years work experience and a general assistant.</i></p>
+</section>
+
+
+
+<script>
+// Automated Slideshow  Display- change image every 3 seconds
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none"; <!-- Research Types of Displays for slideshow-->
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}
+  x[myIndex-1].style.display = "block";
+  setTimeout(carousel, 3000);
+}
+</script>
+
+</body>
+</html>
